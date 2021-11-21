@@ -46,8 +46,6 @@ class BoolfuckInterpreter:
             if self.code[self.cptr] in commands.keys():
                 commands[self.code[self.cptr]]()
             
-            # self.__debug()
-            
             self.cptr += 1
             
         result = ""
