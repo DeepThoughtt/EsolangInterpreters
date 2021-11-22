@@ -15,7 +15,7 @@ result = MiniBitMoveInterpreter('10', '1100101').run()
 print(result) # "0011010"
 ```
 
-## What languages are interpreted?
+## What languages can be interpreted?
 - [Boolfuck](https://esolangs.org/wiki/Boolfuck)
 - [Brainfuck](https://esolangs.org/wiki/Brainfuck)
 - [InfiniTick](https://esolangs.org/wiki/InfiniTick)
