@@ -27,4 +27,4 @@ class TickInterpreter:
                     self.tape[self.tptr] = 0
                     
         return out
-
+        
