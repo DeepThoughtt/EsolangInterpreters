@@ -19,7 +19,7 @@ class BrainfuckInterpreter:
             if self.code[i] == "[":
                 brackets.append(i)
             elif self.code[i] == "]":
-                b = brackets.pop(len(brackets) - 1)
+                b = brackets.pop()
                 self.closed_brackets[b] = i
                 self.open_brackets[i] = b
                 
