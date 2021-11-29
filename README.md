@@ -3,7 +3,7 @@ A collection of interpreters for esoteric languages
 
 ## What is an esoteric language?
 An esoteric programming language is a programming language designed to test the boundaries of computer programming language design, 
-as a proof of concept, as software art, as a hacking interface to another language, or as a joke ([more info here](https://en.wikipedia.org/wiki/Esoteric_programming_language)).
+as a proof of concept, as software art, as a hacking interface to another language, or as a joke (more info [here](https://en.wikipedia.org/wiki/Esoteric_programming_language)).
 
 ## How do I use the interpreters?
 To use an interpreter import the module in your program and then pass the needed parameters to the interpreter's constructor and execute the `run()` function, this will
