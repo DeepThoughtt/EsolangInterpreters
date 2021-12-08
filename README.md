@@ -17,6 +17,7 @@ print(result) # "0011010"
 
 ## What languages can be interpreted?
 - [4RL](https://esolangs.org/wiki/4RL)
+- [ABCD](https://esolangs.org/wiki/ABCD)
 - [Boolfuck](https://esolangs.org/wiki/Boolfuck)
 - [Brainfuck](https://esolangs.org/wiki/Brainfuck)
 - [InfiniTick](https://esolangs.org/wiki/InfiniTick)
