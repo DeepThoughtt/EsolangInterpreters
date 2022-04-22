@@ -1,4 +1,4 @@
-# Esolang-Interpreters
+# Esolang Interpreters
 A collection of interpreters for esoteric languages
 
 ## What is an esoteric language?
