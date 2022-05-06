@@ -25,5 +25,6 @@ print(result) # "0011010"
 - [MiniStringFuck](https://esolangs.org/wiki/MiniStringFuck)
 - [Paintfuck](https://esolangs.org/wiki/Paintfuck)
 - [Smallfuck](https://esolangs.org/wiki/Smallfuck)
+- [Snack](https://esolangs.org/wiki/Snack)
 - [Tick](https://esolangs.org/wiki/Tick)
 - Ticker (no info found)
