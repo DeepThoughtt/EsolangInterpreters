@@ -10,8 +10,8 @@ To use an interpreter import the module in your program and then pass the needed
 give you the result for the program you wrote. For example:
 
 ```
-from MiniBitMoveInterpreter import MiniBitMoveInterpreter
-result = MiniBitMoveInterpreter('10', '1100101').run()
+import minibitmove as mbm
+result = mbm.MiniBitMoveInterpreter('10', '1100101').run()
 print(result) # "0011010"
 ```
 
