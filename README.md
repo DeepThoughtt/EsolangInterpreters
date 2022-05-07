@@ -11,7 +11,7 @@ give you the result for the program you wrote. For example:
 
 ```
 import minibitmove as mbm
-result = mbm.MiniBitMoveInterpreter('10', '1100101').run()
+result = mbm.MiniBitMoveInterpreter("10", "1100101").run()
 print(result) # "0011010"
 ```
 
