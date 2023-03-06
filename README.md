@@ -9,7 +9,7 @@ as a proof of concept, as software art, as a hacking interface to another langua
 To use an interpreter import the module in your program and then pass the needed parameters to the interpreter's constructor and execute the `run()` function, this will
 give you the result for the program you wrote. For example:
 
-```
+```python
 import minibitmove as mbm
 result = mbm.MiniBitMoveInterpreter("10", "1100101").run()
 print(result) # "0011010"
