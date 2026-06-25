@@ -44,7 +44,7 @@ class BoolfuckInterpreter(EsolangInterpreter):
         read_bit = self.memory[self.memory_pointer]
         self.output_bits_list.insert(0, read_bit)
 
-        # If we reach one byte of length for the output 
+        # If we reach one byte of length for the output
         # list we print it out and then clear it
         if len(self.output_bits_list) == 8:
             char_bits = map(str, self.output_bits_list)

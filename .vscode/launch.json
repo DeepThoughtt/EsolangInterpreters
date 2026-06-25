@@ -2,6 +2,24 @@
 	"version": "0.2.0",
 	"configurations": [
 		{
+			"name": "ABCD Interpreter Launcher",
+			"type": "debugpy",
+			"request": "launch",
+			"module": "src.brainfuck",
+			"cwd": "${workspaceFolder}",
+			"console": "integratedTerminal",
+			"args": ["abcdtest.ab"]
+		},
+		{
+			"name": "Boolfuck Interpreter Launcher",
+			"type": "debugpy",
+			"request": "launch",
+			"module": "src.brainfuck",
+			"cwd": "${workspaceFolder}",
+			"console": "integratedTerminal",
+			"args": ["bfktest.bfk"]
+		},
+		{
 			"name": "Brainfuck Interpreter Launcher",
 			"type": "debugpy",
 			"request": "launch",
@@ -9,6 +27,15 @@
 			"cwd": "${workspaceFolder}",
 			"console": "integratedTerminal",
 			"args": ["bftest.bf"]
+		},
+		{
+			"name": "Forreal Interpreter Launcher",
+			"type": "debugpy",
+			"request": "launch",
+			"module": "src.brainfuck",
+			"cwd": "${workspaceFolder}",
+			"console": "integratedTerminal",
+			"args": ["frtest.fr"]
 		}
 	]
 }
