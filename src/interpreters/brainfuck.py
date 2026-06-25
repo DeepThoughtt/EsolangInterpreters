@@ -1,6 +1,6 @@
-from base.interpreter import Interpreter
+from src.base.esoteric_interpreter import EsotericInterpreter
 
-class BrainfuckInterpreter(Interpreter):
+class BrainfuckInterpreter(EsotericInterpreter):
     
     def __init__(self, filename):
 

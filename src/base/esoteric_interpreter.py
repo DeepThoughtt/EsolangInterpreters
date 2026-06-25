@@ -1,4 +1,4 @@
-class Interpreter:
+class EsotericInterpreter:
 
     def __init__(
         self, 
