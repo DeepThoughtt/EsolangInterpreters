@@ -1,15 +1,24 @@
 class Interpreter:
 
-    def __init__(self, allowed_source_file_extensions, filename, open_loop_instruction = None, closed_loop_instruction = None, print_instruction = None, input_instruction = None):
+    def __init__(
+        self, 
+        allowed_source_file_extensions, 
+        filename, 
+        open_loop_instruction = None,
+        closed_loop_instruction = None, 
+        print_instruction = None, 
+        input_instruction = None,
+        move_pointer_left_instruction = None, 
+        move_pointer_right_instruction = None,
+        increment_cell_value_instruction = None,
+        decrement_cell_value_instruction = None,
+    ):
+        
         self.allowed_source_file_extensions = tuple(allowed_source_file_extensions)
 
-        if self.invalid_file_extension(filename):
+        # Invalid file extension
+        if not filename.endswith(self.allowed_source_file_extensions):
             raise ValueError("Invalid file extension")
-
-        self.open_loop_instruction = open_loop_instruction
-        self.closed_loop_instruction = closed_loop_instruction
-        self.print_instruction = print_instruction
-        self.input_instruction = input_instruction
         
         with open(filename, "r", encoding = "utf-8") as source_code_file:
             self.source_code = source_code_file.read()
@@ -23,15 +32,28 @@ class Interpreter:
         self.open_loop_instructions = {}
         self.language_instructions = {}
 
-        if self.loop_instructions_defined():
-            self.setup_loop_instructions_dicts()
-            self.setup_loop_instructions()
+        if open_loop_instruction != None and closed_loop_instruction != None:
+            self.language_instructions[open_loop_instruction] = self.eval_open_loop
+            self.language_instructions[closed_loop_instruction] = self.eval_closed_loop
+            self.setup_loop_dicts(open_loop_instruction, closed_loop_instruction)
         
-        if self.input_instruction_defined():
-            self.setup_input_character_instruction()
+        if input_instruction != None:
+            self.language_instructions[input_instruction] = self.input_character
         
-        if self.print_instruction_defined():
-            self.setup_print_character_instruction()
+        if print_instruction != None:
+            self.language_instructions[print_instruction] = self.print_character
+
+        if move_pointer_left_instruction != None:
+            self.language_instructions[move_pointer_left_instruction] = self.move_pointer_left
+
+        if move_pointer_right_instruction != None:
+            self.language_instructions[move_pointer_right_instruction] = self.move_pointer_right
+
+        if increment_cell_value_instruction != None:
+            self.language_instructions[increment_cell_value_instruction] = self.increment_cell_value
+
+        if decrement_cell_value_instruction != None:
+            self.language_instructions[decrement_cell_value_instruction] = self.decrement_cell_value
 
     def run(self):
         while self.source_code_pointer < len(self.source_code):
@@ -41,48 +63,26 @@ class Interpreter:
 
             self.source_code_pointer += 1
 
-    def invalid_file_extension(self, filename):
-        return not filename.endswith(self.allowed_source_file_extensions)
-
-    def loop_instructions_defined(self):
-        return self.open_loop_instruction != None and self.closed_loop_instruction != None
-    
-    def input_instruction_defined(self):
-        return self.input_instruction != None
-    
-    def print_instruction_defined(self):
-        return self.print_instruction != None
-
-    def setup_loop_instructions_dicts(self):
+    def setup_loop_dicts(self, open_loop_instruction, closed_loop_instruction):
         loop_instructions = []
         i = 0
 
         while i < len(self.source_code):
-            if self.source_code[i] == self.open_loop_instruction:
+            if self.source_code[i] == open_loop_instruction:
                 loop_instructions.append(i)
 
-            elif self.source_code[i] == self.closed_loop_instruction:
+            elif self.source_code[i] == closed_loop_instruction:
                 instruction = loop_instructions.pop()
                 self.closed_loop_instructions[instruction] = i
                 self.open_loop_instructions[i] = instruction
                 
             i += 1
 
-    def setup_loop_instructions(self):
-        self.language_instructions[self.open_loop_instruction] = self.eval_open_loop_instruction
-        self.language_instructions[self.closed_loop_instruction] = self.eval_closed_loop_instruction
-
-    def setup_print_character_instruction(self):
-        self.language_instructions[self.print_instruction] = self.print_character
-
-    def setup_input_character_instruction(self):
-        self.language_instructions[self.input_instruction] = self.input_character
-
-    def eval_open_loop_instruction(self):
+    def eval_open_loop(self):
         if self.memory[self.memory_pointer] == 0:
             self.source_code_pointer = self.closed_loop_instructions[self.source_code_pointer]
 
-    def eval_closed_loop_instruction(self):
+    def eval_closed_loop(self):
         if self.memory[self.memory_pointer] != 0:
             self.source_code_pointer = self.open_loop_instructions[self.source_code_pointer]
 
@@ -94,3 +94,21 @@ class Interpreter:
         inserted_character = input()
         character_code = ord(inserted_character)
         self.memory[self.memory_pointer] = character_code
+
+    def move_pointer_left(self):
+        self.memory_pointer -= 1
+        
+        if self.memory_pointer not in self.memory.keys():
+            self.memory[self.memory_pointer] = 0
+
+    def move_pointer_right(self):
+        self.memory_pointer += 1
+        
+        if self.memory_pointer not in self.memory.keys():
+            self.memory[self.memory_pointer] = 0
+
+    def increment_cell_value(self):
+        self.memory[self.memory_pointer] = (self.memory[self.memory_pointer] + 1) % 256
+
+    def decrement_cell_value(self):
+        self.memory[self.memory_pointer] = (self.memory[self.memory_pointer] - 1) % 256
