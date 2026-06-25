@@ -1,0 +1,14 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "Brainfuck Interpreter Launcher",
+			"type": "debugpy",
+			"request": "launch",
+			"module": "src.brainfuck",
+			"cwd": "${workspaceFolder}",
+			"console": "integratedTerminal",
+			"args": ["bftest.bf"]
+		}
+	]
+}
