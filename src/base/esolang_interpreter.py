@@ -1,4 +1,4 @@
-class EsotericInterpreter:
+class EsolangInterpreter:
 
     def __init__(
         self, 
@@ -92,6 +92,11 @@ class EsotericInterpreter:
 
     def input_character(self):
         inserted_character = input()
+        
+        # The user wrote nothing
+        if inserted_character == None:
+            return
+
         character_code = ord(inserted_character)
         self.memory[self.memory_pointer] = character_code
 

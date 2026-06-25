@@ -1,6 +1,6 @@
-from src.base.esoteric_interpreter import EsotericInterpreter
+from src.base.esolang_interpreter import EsolangInterpreter
 
-class BrainfuckInterpreter(EsotericInterpreter):
+class BrainfuckInterpreter(EsolangInterpreter):
     
     def __init__(self, filename):
 
@@ -14,5 +14,5 @@ class BrainfuckInterpreter(EsotericInterpreter):
             move_pointer_left_instruction = "<",
             move_pointer_right_instruction = ">",
             increment_cell_value_instruction = "+",
-            decrement_cell_value_instruction = "+",
+            decrement_cell_value_instruction = "-",
         )
