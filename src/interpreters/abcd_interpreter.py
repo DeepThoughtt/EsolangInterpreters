@@ -2,7 +2,7 @@ from src.base.esolang_interpreter import EsolangInterpreter
 
 class AbcdInterpreter(EsolangInterpreter):
 
-    def __init__(self,filename):
+    def __init__(self, filename):
 
         super().__init__(
             filename = filename,

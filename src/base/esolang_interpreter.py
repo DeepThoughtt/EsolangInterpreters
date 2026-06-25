@@ -16,7 +16,6 @@ class EsolangInterpreter:
         
         self.allowed_source_file_extensions = tuple(allowed_source_file_extensions)
 
-        # Invalid file extension
         if not filename.endswith(self.allowed_source_file_extensions):
             raise ValueError("Invalid file extension")
         
