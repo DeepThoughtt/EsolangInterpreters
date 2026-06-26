@@ -8,7 +8,7 @@
 			"module": "src.abcd",
 			"cwd": "${workspaceFolder}",
 			"console": "integratedTerminal",
-			"args": ["tests/abcdtest.ab"]
+			"args": ["tests/abcd_test.ab"]
 		},
 		{
 			"name": "Boolfuck Interpreter Launcher",
@@ -17,7 +17,7 @@
 			"module": "src.boolfuck",
 			"cwd": "${workspaceFolder}",
 			"console": "integratedTerminal",
-			"args": ["tests/bfktest.bfk"]
+			"args": ["tests/boolfuck_test.bfk"]
 		},
 		{
 			"name": "Brainfuck Interpreter Launcher",
@@ -26,7 +26,7 @@
 			"module": "src.brainfuck",
 			"cwd": "${workspaceFolder}",
 			"console": "integratedTerminal",
-			"args": ["tests/bftest.bf"]
+			"args": ["tests/brainfuck_test.bf"]
 		},
 		{
 			"name": "Forreal Interpreter Launcher",
@@ -35,7 +35,16 @@
 			"module": "src.forreal",
 			"cwd": "${workspaceFolder}",
 			"console": "integratedTerminal",
-			"args": ["tests/frtest.fr"]
+			"args": ["tests/forreal_test.fr"]
+		},
+		{
+			"name": "InfiniTick Interpreter Launcher",
+			"type": "debugpy",
+			"request": "launch",
+			"module": "src.infinitick",
+			"cwd": "${workspaceFolder}",
+			"console": "integratedTerminal",
+			"args": ["tests/infinitick_test.tick"]
 		}
 	]
 }
