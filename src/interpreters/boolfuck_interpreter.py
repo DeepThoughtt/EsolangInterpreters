@@ -40,7 +40,7 @@ class BoolfuckInterpreter(EsolangInterpreter):
             del self.input_bytes_list[0]
 
     def print_to_output_list(self):
-        # We read the bit in the memory cell pointed and add it to the output
+        # We read the bit in the pointed memory cell and add it to the output
         read_bit = self.memory[self.memory_pointer]
         self.output_bits_list.insert(0, read_bit)
 
