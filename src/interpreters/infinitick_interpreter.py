@@ -13,9 +13,9 @@ class InfiniTickInterpreter(EsolangInterpreter):
             decrement_cell_value = "-",
             print_instruction = "*",
         )
-
-        self.language_instructions["\\"] = self.skip_if_not_zero
-        self.language_instructions["/"] = self.skip_if_zero
+        
+        self.add_instruction("\\", self.skip_if_not_zero)
+        self.add_instruction("/", self.skip_if_zero)
         self.skip_next_instruction = False
         self.back_flag = False
 

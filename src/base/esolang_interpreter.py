@@ -37,22 +37,22 @@ class EsolangInterpreter:
             self.setup_loop_dicts(open_loop_instruction, closed_loop_instruction)
         
         if input_instruction != None:
-            self.language_instructions[input_instruction] = self.input_character
+            self.add_instruction(input_instruction, self.input_character)
         
         if print_instruction != None:
-            self.language_instructions[print_instruction] = self.print_character
+            self.add_instruction(print_instruction, self.print_character)
 
         if move_pointer_left_instruction != None:
-            self.language_instructions[move_pointer_left_instruction] = self.move_pointer_left
+            self.add_instruction(move_pointer_left_instruction, self.move_pointer_left)
 
         if move_pointer_right_instruction != None:
-            self.language_instructions[move_pointer_right_instruction] = self.move_pointer_right
+            self.add_instruction(move_pointer_right_instruction, self.move_pointer_right)
 
         if increment_cell_value_instruction != None:
-            self.language_instructions[increment_cell_value_instruction] = self.increment_cell_value
+            self.add_instruction(increment_cell_value_instruction, self.increment_cell_value)
 
         if decrement_cell_value_instruction != None:
-            self.language_instructions[decrement_cell_value_instruction] = self.decrement_cell_value
+            self.add_instruction(decrement_cell_value_instruction, self.decrement_cell_value)
 
     def run(self):
         while self.source_code_pointer < len(self.source_code):
@@ -61,6 +61,9 @@ class EsolangInterpreter:
                 self.language_instructions[instruction]()
 
             self.source_code_pointer += 1
+
+    def add_instruction(self, instruction, call):
+        self.language_instructions[instruction] = call
 
     def setup_loop_dicts(self, open_loop_instruction, closed_loop_instruction):
         loop_instructions = []

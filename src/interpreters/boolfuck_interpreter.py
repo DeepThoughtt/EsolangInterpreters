@@ -13,12 +13,11 @@ class BoolfuckInterpreter(EsolangInterpreter):
             move_pointer_right_instruction = ">",
         )
 
-        self.input_buffer = []
+        self.add_instruction(";", self.print_to_output_list)
+        self.add_instruction(",", self.read_bit_from_input)
+        self.add_instruction("+", self.flip_bit)
         self.output_buffer = []
-
-        self.language_instructions[";"] = self.print_to_output_list
-        self.language_instructions[","] = self.read_bit_from_input
-        self.language_instructions["+"] = self.flip_bit
+        self.input_buffer = []
 
     def flip_bit(self):
         if self.memory[self.memory_pointer] == 0:
