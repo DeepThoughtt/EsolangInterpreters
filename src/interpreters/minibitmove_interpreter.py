@@ -20,6 +20,7 @@ class MiniBitMoveInterpreter(EsolangInterpreter):
                 self.memory[i] = int(file_content[i])
         
     def run(self):
+        # The code keeps running until the end of the data is reached
         while self.memory_pointer < len(self.memory):
             if self.source_code[self.source_code_pointer] == "1":
                 self.flip_bit()
