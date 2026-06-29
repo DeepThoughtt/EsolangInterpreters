@@ -37,7 +37,8 @@ class PaintfuckInterpreter(EsolangInterpreter):
 
         while self.source_code_pointer < len(self.source_code_pointer) and iteration_counter < self.iterations:
             if self.source_code[self.source_code_pointer] in self.language_instructions.keys():
-                self.language_instructions[self.source_code[self.source_code_pointer]]()
+                instruction = self.source_code[self.source_code_pointer]
+                self.language_instructions[instruction]()
                 iteration_counter += 1
                 
             self.source_code_pointer += 1
