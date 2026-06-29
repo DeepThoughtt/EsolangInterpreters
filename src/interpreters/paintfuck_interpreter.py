@@ -2,10 +2,10 @@ from src.base.esolang_interpreter import EsolangInterpreter
 
 class PaintfuckInterpreter(EsolangInterpreter):
 
-    def __init__(self, filename, iterations, width, height):
+    def __init__(self, source_code_file, iterations, width, height):
 
         super().__init__(
-            filename = filename,
+            source_code_file = source_code_file,
             allowed_source_file_extensions = [".pf"],
         )
 

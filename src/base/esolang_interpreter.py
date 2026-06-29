@@ -3,7 +3,7 @@ class EsolangInterpreter:
     def __init__(
         self, 
         allowed_source_file_extensions, 
-        filename, 
+        source_code_file, 
         open_loop_instruction = None,
         closed_loop_instruction = None, 
         print_instruction = None, 
@@ -17,11 +17,11 @@ class EsolangInterpreter:
         
         self.allowed_source_file_extensions = tuple(allowed_source_file_extensions)
 
-        if not filename.endswith(self.allowed_source_file_extensions):
+        if not source_code_file.endswith(self.allowed_source_file_extensions):
             raise ValueError("Invalid file extension")
         
-        with open(filename, "r", encoding = "utf-8") as source_code_file:
-            self.source_code = source_code_file.read()
+        with open(source_code_file, "r", encoding = "utf-8") as source_code_file_content:
+            self.source_code = source_code_file_content.read()
 
         # The key is the memory cell index, the value is the value inside the cell
         self.memory = {0 : 0}

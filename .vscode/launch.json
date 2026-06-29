@@ -73,6 +73,33 @@
 			"console": "integratedTerminal",
 			// Source code file, iterations, width, height
 			"args": ["tests/paintfuck/src.pf", "100", "20", "20"]
+		},
+		{
+			"name": "Smallfuck Interpreter Launcher",
+			"type": "debugpy",
+			"request": "launch",
+			"module": "src.smallfuck",
+			"cwd": "${workspaceFolder}",
+			"console": "integratedTerminal",
+			"args": ["tests/smallfuck/src.sf", "tests/smallfuck/data.sfdata"]
+		},
+		{
+			"name": "Tick Interpreter Launcher",
+			"type": "debugpy",
+			"request": "launch",
+			"module": "src.tick",
+			"cwd": "${workspaceFolder}",
+			"console": "integratedTerminal",
+			"args": ["tests/tick/src.tick"]
+		},
+		{
+			"name": "Ticker Interpreter Launcher",
+			"type": "debugpy",
+			"request": "launch",
+			"module": "src.ticker",
+			"cwd": "${workspaceFolder}",
+			"console": "integratedTerminal",
+			"args": ["tests/ticker/src.ticker"]
 		}
 	]
 }

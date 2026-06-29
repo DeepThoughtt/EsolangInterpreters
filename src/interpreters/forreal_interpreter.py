@@ -2,10 +2,10 @@ from src.base.esolang_interpreter import EsolangInterpreter
 
 class ForrealInterpreter(EsolangInterpreter):
 
-    def __init__(self, filename):
+    def __init__(self, source_code_file):
 
         super().__init__(
-            filename = filename,
+            source_code_file = source_code_file,
             allowed_source_file_extensions = [".fr"],
             increment_cell_value_instruction = "4",
             decrement_cell_value_instruction = "r",

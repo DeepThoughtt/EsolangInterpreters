@@ -2,10 +2,10 @@ from src.base.esolang_interpreter import EsolangInterpreter
 
 class MiniBitMoveInterpreter(EsolangInterpreter):
 
-    def __init__(self, filename, data_file):
+    def __init__(self, source_code_file, data_file):
 
         super().__init__(
-            filename = filename,
+            source_code_file = source_code_file,
             allowed_source_file_extensions = [".mbm"],
         )
 
@@ -13,8 +13,8 @@ class MiniBitMoveInterpreter(EsolangInterpreter):
             raise ValueError("Invalid data file extension")
 
         # MiniBitMove requires a source code file and a data file
-        with open(data_file, "r", encoding = "utf-8") as data_file:
-            file_content = data_file.read()
+        with open(data_file, "r", encoding = "utf-8") as data_file_content:
+            file_content = data_file_content.read()
 
             for i in range(len(file_content)):
                 self.memory[i] = int(file_content[i])

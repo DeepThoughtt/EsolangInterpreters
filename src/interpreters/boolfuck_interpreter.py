@@ -2,10 +2,10 @@ from src.base.esolang_interpreter import EsolangInterpreter
 
 class BoolfuckInterpreter(EsolangInterpreter):
 
-    def __init__(self, filename):
+    def __init__(self, source_code_file):
 
         super().__init__(
-            filename = filename,
+            source_code_file = source_code_file,
             allowed_source_file_extensions = [".bfk"],
             open_loop_instruction = "[",
             closed_loop_instruction = "]",
