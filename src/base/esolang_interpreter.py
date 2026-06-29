@@ -62,8 +62,8 @@ class EsolangInterpreter:
 
             self.source_code_pointer += 1
 
-    def add_instruction(self, instruction, call):
-        self.language_instructions[instruction] = call
+    def add_instruction(self, instruction, called_function):
+        self.language_instructions[instruction] = called_function
 
     def setup_loop_dicts(self, open_loop_instruction, closed_loop_instruction):
         loop_instructions = []
