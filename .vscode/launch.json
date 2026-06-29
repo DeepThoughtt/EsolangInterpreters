@@ -63,6 +63,16 @@
 			"cwd": "${workspaceFolder}",
 			"console": "integratedTerminal",
 			"args": ["tests/ministringfuck/src.msf"]
+		},
+		{
+			"name": "Paintfuck Interpreter Launcher",
+			"type": "debugpy",
+			"request": "launch",
+			"module": "src.paintfuck",
+			"cwd": "${workspaceFolder}",
+			"console": "integratedTerminal",
+			// Source code file, iterations, width, height
+			"args": ["tests/paintfuck/src.pf", "100", "20", "20"]
 		}
 	]
 }
