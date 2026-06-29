@@ -12,6 +12,7 @@ class MiniBitMoveInterpreter(EsolangInterpreter):
         if not data_file.endswith(".mbmdata"):
             raise ValueError("Invalid data file extension")
 
+        # MiniBitMove requires a source code file and a data file
         with open(data_file, "r", encoding = "utf-8") as data_file:
             file_content = data_file.read()
 

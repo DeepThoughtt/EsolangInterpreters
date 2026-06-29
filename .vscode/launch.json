@@ -50,10 +50,19 @@
 			"name": "MiniBitMove Interpreter Launcher",
 			"type": "debugpy",
 			"request": "launch",
-			"module": "src.infinitick",
+			"module": "src.minibitmove",
 			"cwd": "${workspaceFolder}",
 			"console": "integratedTerminal",
 			"args": ["tests/minibitmove/src.mbm", "tests/minibitmove/data.mbmdata"]
+		},
+		{
+			"name": "MiniStringFuck Interpreter Launcher",
+			"type": "debugpy",
+			"request": "launch",
+			"module": "src.ministringfuck",
+			"cwd": "${workspaceFolder}",
+			"console": "integratedTerminal",
+			"args": ["tests/ministringfuck/src.msf"]
 		}
 	]
 }
