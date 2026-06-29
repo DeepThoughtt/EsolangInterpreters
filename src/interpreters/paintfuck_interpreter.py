@@ -6,7 +6,7 @@ class PaintfuckInterpreter(EsolangInterpreter):
 
         super().__init__(
             filename = filename,
-            allowed_source_file_extensions = ".pf",
+            allowed_source_file_extensions = [".pf"],
         )
 
         self.width = width
