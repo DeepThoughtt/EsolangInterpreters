@@ -8,7 +8,7 @@
 			"module": "src.abcd",
 			"cwd": "${workspaceFolder}",
 			"console": "integratedTerminal",
-			"args": ["tests/abcd_test.ab"]
+			"args": ["tests/abcd/src.ab"]
 		},
 		{
 			"name": "Boolfuck Interpreter Launcher",
@@ -17,7 +17,7 @@
 			"module": "src.boolfuck",
 			"cwd": "${workspaceFolder}",
 			"console": "integratedTerminal",
-			"args": ["tests/boolfuck_test.bfk"]
+			"args": ["tests/boolfuck/src.bfk"]
 		},
 		{
 			"name": "Brainfuck Interpreter Launcher",
@@ -26,7 +26,7 @@
 			"module": "src.brainfuck",
 			"cwd": "${workspaceFolder}",
 			"console": "integratedTerminal",
-			"args": ["tests/brainfuck_test.bf"]
+			"args": ["tests/brainfuck/src.bf"]
 		},
 		{
 			"name": "Forreal Interpreter Launcher",
@@ -35,7 +35,7 @@
 			"module": "src.forreal",
 			"cwd": "${workspaceFolder}",
 			"console": "integratedTerminal",
-			"args": ["tests/forreal_test.fr"]
+			"args": ["tests/forreal/src.fr"]
 		},
 		{
 			"name": "InfiniTick Interpreter Launcher",
@@ -44,7 +44,16 @@
 			"module": "src.infinitick",
 			"cwd": "${workspaceFolder}",
 			"console": "integratedTerminal",
-			"args": ["tests/infinitick_test.tick"]
+			"args": ["tests/infinitick/src.tick"]
+		},
+		{
+			"name": "MiniBitMove Interpreter Launcher",
+			"type": "debugpy",
+			"request": "launch",
+			"module": "src.infinitick",
+			"cwd": "${workspaceFolder}",
+			"console": "integratedTerminal",
+			"args": ["tests/minibitmove/src.mbm", "tests/minibitmove/data.mbmdata"]
 		}
 	]
 }

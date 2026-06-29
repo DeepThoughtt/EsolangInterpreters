@@ -12,6 +12,7 @@ class EsolangInterpreter:
         move_pointer_right_instruction = None,
         increment_cell_value_instruction = None,
         decrement_cell_value_instruction = None,
+        flip_bit_instruction = None,
     ):
         
         self.allowed_source_file_extensions = tuple(allowed_source_file_extensions)
@@ -53,6 +54,9 @@ class EsolangInterpreter:
 
         if decrement_cell_value_instruction != None:
             self.add_instruction(decrement_cell_value_instruction, self.decrement_cell_value)
+
+        if flip_bit_instruction != None:
+            self.add_instruction(flip_bit_instruction, self.flip_bit)
 
     def run(self):
         while self.source_code_pointer < len(self.source_code):
@@ -119,3 +123,9 @@ class EsolangInterpreter:
 
     def decrement_cell_value(self):
         self.memory[self.memory_pointer] = (self.memory[self.memory_pointer] - 1) % 256
+
+    def flip_bit(self):
+        if self.memory[self.memory_pointer] == 0:
+            self.memory[self.memory_pointer] = 1
+        else:
+            self.memory[self.memory_pointer] = 0

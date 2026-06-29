@@ -11,19 +11,13 @@ class BoolfuckInterpreter(EsolangInterpreter):
             closed_loop_instruction = "]",
             move_pointer_left_instruction = "<",
             move_pointer_right_instruction = ">",
+            flip_bit_instruction = "+",
         )
 
         self.add_instruction(";", self.print_to_output_list)
         self.add_instruction(",", self.read_bit_from_input)
-        self.add_instruction("+", self.flip_bit)
         self.output_buffer = []
         self.input_buffer = []
-
-    def flip_bit(self):
-        if self.memory[self.memory_pointer] == 0:
-            self.memory[self.memory_pointer] = 1
-        else:
-            self.memory[self.memory_pointer] = 0
 
     def read_bit_from_input(self):
         # No more bits to read, read input from the user
@@ -47,7 +41,7 @@ class BoolfuckInterpreter(EsolangInterpreter):
         # If we reach one byte of length for the output
         # list we print it out and then clear it
         if len(self.output_buffer) == 8:
-            char_bits = map(str, self.output_buffer)
-            self.output_buffer.clear()
+            char_bits = [str(bit) for bit in self.output_buffer]
             out_char = "".join(char_bits)
+            self.output_buffer.clear()
             print(out_char)
