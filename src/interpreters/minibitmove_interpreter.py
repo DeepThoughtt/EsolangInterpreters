@@ -24,7 +24,8 @@ class MiniBitMoveInterpreter(EsolangInterpreter):
             file_content = data_file_content.read()
 
             for i in range(len(file_content)):
-                self.memory[i] = int(file_content[i])
+                if file_content[i] == "0" or file_content[i] == "1":
+                    self.memory[i] = ord(file_content[i])
         
     def run(self):
         # The code keeps running until the end of the data is reached
