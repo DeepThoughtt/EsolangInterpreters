@@ -4,7 +4,7 @@ from src.interpreters.boolfuck_interpreter import BoolfuckInterpreter
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("source_code_file", type = str, required = True)
+    parser.add_argument("source_code_file", type = str)
     args = parser.parse_args()
     BoolfuckInterpreter(args.source_code_file).run()
 

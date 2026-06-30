@@ -27,9 +27,9 @@ class TickerInterpreter(EsolangInterpreter):
 
     def print_character(self):
         if self.memory_pointer in self.memory:
-            print(chr(self.memory[self.memory_pointer]))
+            print(chr(self.memory[self.memory_pointer]), end = "")
         else:
-            print(chr(0))
+            print(chr(0), end = "")
 
     def set_data_to_zero(self):
         if self.memory_pointer in self.memory:

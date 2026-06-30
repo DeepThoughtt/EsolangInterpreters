@@ -100,7 +100,7 @@ class EsolangInterpreter:
 
     def print_character(self):
         character = chr(self.memory[self.memory_pointer])
-        print(character)
+        print(character, end = "")
 
     def input_character(self):
         inserted_character = input()

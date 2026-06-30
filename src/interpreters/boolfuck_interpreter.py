@@ -44,4 +44,4 @@ class BoolfuckInterpreter(EsolangInterpreter):
             char_bits = [str(bit) for bit in self.output_buffer]
             out_char = "".join(char_bits)
             self.output_buffer.clear()
-            print(out_char)
+            print(chr(int(out_char, 2)), end = "")
