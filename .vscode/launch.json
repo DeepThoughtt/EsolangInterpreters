@@ -8,7 +8,7 @@
 			"module": "src.abcd",
 			"cwd": "${workspaceFolder}",
 			"console": "integratedTerminal",
-			"args": ["tests/abcd/src.ab"]
+			"args": [".tests/abcd/src.ab"]
 		},
 		{
 			"name": "Boolfuck Interpreter Launcher",
@@ -17,7 +17,7 @@
 			"module": "src.boolfuck",
 			"cwd": "${workspaceFolder}",
 			"console": "integratedTerminal",
-			"args": ["tests/boolfuck/src.bfk"]
+			"args": [".tests/boolfuck/src.bfk"]
 		},
 		{
 			"name": "Brainfuck Interpreter Launcher",
@@ -26,7 +26,7 @@
 			"module": "src.brainfuck",
 			"cwd": "${workspaceFolder}",
 			"console": "integratedTerminal",
-			"args": ["tests/brainfuck/src.bf"]
+			"args": [".tests/brainfuck/src.bf"]
 		},
 		{
 			"name": "Forreal Interpreter Launcher",
@@ -35,7 +35,7 @@
 			"module": "src.forreal",
 			"cwd": "${workspaceFolder}",
 			"console": "integratedTerminal",
-			"args": ["tests/forreal/src.fr"]
+			"args": [".tests/forreal/src.fr"]
 		},
 		{
 			"name": "InfiniTick Interpreter Launcher",
@@ -44,7 +44,7 @@
 			"module": "src.infinitick",
 			"cwd": "${workspaceFolder}",
 			"console": "integratedTerminal",
-			"args": ["tests/infinitick/src.tick"]
+			"args": [".tests/infinitick/src.tick"]
 		},
 		{
 			"name": "MiniBitMove Interpreter Launcher",
@@ -53,7 +53,7 @@
 			"module": "src.minibitmove",
 			"cwd": "${workspaceFolder}",
 			"console": "integratedTerminal",
-			"args": ["tests/minibitmove/src.mbm", "tests/minibitmove/data.mbmdata"]
+			"args": [".tests/minibitmove/src.mbm", ".tests/minibitmove/data.mbmdata"]
 		},
 		{
 			"name": "MiniStringFuck Interpreter Launcher",
@@ -62,7 +62,7 @@
 			"module": "src.ministringfuck",
 			"cwd": "${workspaceFolder}",
 			"console": "integratedTerminal",
-			"args": ["tests/ministringfuck/src.msf"]
+			"args": [".tests/ministringfuck/src.msf"]
 		},
 		{
 			"name": "Paintfuck Interpreter Launcher",
@@ -72,7 +72,7 @@
 			"cwd": "${workspaceFolder}",
 			"console": "integratedTerminal",
 			// Source code file, iterations, width, height
-			"args": ["tests/paintfuck/src.pf", "100", "20", "20"]
+			"args": [".tests/paintfuck/src.pf", "100", "20", "20"]
 		},
 		{
 			"name": "Smallfuck Interpreter Launcher",
@@ -81,7 +81,7 @@
 			"module": "src.smallfuck",
 			"cwd": "${workspaceFolder}",
 			"console": "integratedTerminal",
-			"args": ["tests/smallfuck/src.sf", "tests/smallfuck/data.sfdata"]
+			"args": [".tests/smallfuck/src.sf", ".tests/smallfuck/data.sfdata"]
 		},
 		{
 			"name": "Tick Interpreter Launcher",
@@ -90,7 +90,7 @@
 			"module": "src.tick",
 			"cwd": "${workspaceFolder}",
 			"console": "integratedTerminal",
-			"args": ["tests/tick/src.tick"]
+			"args": [".tests/tick/src.tick"]
 		},
 		{
 			"name": "Ticker Interpreter Launcher",
@@ -99,7 +99,7 @@
 			"module": "src.ticker",
 			"cwd": "${workspaceFolder}",
 			"console": "integratedTerminal",
-			"args": ["tests/ticker/src.ticker"]
+			"args": [".tests/ticker/src.ticker"]
 		}
 	]
 }
