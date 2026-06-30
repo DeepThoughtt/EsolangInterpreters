@@ -3,7 +3,7 @@ import argparse
 from src.interpreters.minibitmove_interpreter import MiniBitMoveInterpreter
 
 def main():
-    parser = argparse.ArgumentParser()
+    parser = argparse.ArgumentParser(add_help = False)
     parser.add_argument("source_code_file", type = str)
     parser.add_argument("data_file", type = str)
     args = parser.parse_args()

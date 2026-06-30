@@ -3,7 +3,7 @@ import argparse
 from src.interpreters.infinitick_interpreter import InfiniTickInterpreter
 
 def main():
-    parser = argparse.ArgumentParser()
+    parser = argparse.ArgumentParser(add_help = False)
     parser.add_argument("source_code_file", type = str)
     args = parser.parse_args()
     InfiniTickInterpreter(args.source_code_file).run()

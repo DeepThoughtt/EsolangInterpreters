@@ -35,7 +35,7 @@ class PaintfuckInterpreter(EsolangInterpreter):
     def run(self):
         iteration_counter = 0
 
-        while self.source_code_pointer < len(self.source_code_pointer) and iteration_counter < self.iterations:
+        while self.source_code_pointer < len(self.source_code) and iteration_counter < self.iterations:
             if self.source_code[self.source_code_pointer] in self.language_instructions.keys():
                 instruction = self.source_code[self.source_code_pointer]
                 self.language_instructions[instruction]()
@@ -45,7 +45,7 @@ class PaintfuckInterpreter(EsolangInterpreter):
 
         result = []
         for line in self.memory:
-            result.append(str(bit) for bit in line)
+            result.append("".join([str(bit) for bit in line]))
             
         return "\r\n".join(result)
 
