@@ -30,7 +30,8 @@ class SmallfuckInterpreter(EsolangInterpreter):
             file_content = data_file.read()
 
             for i in range(len(file_content)):
-                self.memory[i] = int(file_content[i])
+                if file_content[i] == "0" or file_content == "1":
+                    self.memory[i] = int(file_content[i])
 
     def run(self):
         # We keep executing code until we end out of bounds, either on the source code or the memory
@@ -40,8 +41,8 @@ class SmallfuckInterpreter(EsolangInterpreter):
                 self.language_instructions[instruction]()
 
             self.source_code_pointer += 1
-
-        return "".join(str(bit) for bit in self.memory)
+        
+        return "".join(str(bit) for bit in self.memory.values())
 
     def move_pointer_left(self):
         self.memory_pointer -= 1
