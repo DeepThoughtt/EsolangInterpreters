@@ -1,3 +1,5 @@
+import pathlib
+
 from src.base.esolang_interpreter import EsolangInterpreter
 
 class MiniBitMoveInterpreter(EsolangInterpreter):
@@ -8,6 +10,11 @@ class MiniBitMoveInterpreter(EsolangInterpreter):
             source_code_file = source_code_file,
             allowed_source_file_extensions = [".mbm"],
         )
+
+        data_file_path = pathlib.Path(data_file)
+
+        if not data_file_path.is_file():
+            raise ValueError("File not found")
 
         if not data_file.endswith(".mbmdata"):
             raise ValueError("Invalid data file extension")

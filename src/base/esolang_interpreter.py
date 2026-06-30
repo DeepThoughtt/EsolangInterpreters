@@ -1,3 +1,5 @@
+import pathlib
+
 class EsolangInterpreter:
 
     def __init__(
@@ -16,6 +18,10 @@ class EsolangInterpreter:
     ):
         
         self.allowed_source_file_extensions = tuple(allowed_source_file_extensions)
+        source_code_file_path = pathlib.Path(source_code_file)
+
+        if not source_code_file_path.is_file():
+            raise ValueError("File not found")
 
         if not source_code_file.endswith(self.allowed_source_file_extensions):
             raise ValueError("Invalid file extension")

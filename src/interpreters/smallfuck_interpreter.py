@@ -1,3 +1,5 @@
+import pathlib
+
 from src.base.esolang_interpreter import EsolangInterpreter
 
 class SmallfuckInterpreter(EsolangInterpreter):
@@ -14,6 +16,11 @@ class SmallfuckInterpreter(EsolangInterpreter):
 
         self.add_instruction(">", self.move_pointer_right)
         self.add_instruction("<", self.move_pointer_left)
+
+        data_file_path = pathlib.Path(data_file)
+
+        if not data_file_path.is_file():
+            raise ValueError("File not found")
 
         if not data_file.endswith(".sfdata"):
             raise ValueError("Invalid data file extension")
