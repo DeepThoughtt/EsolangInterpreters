@@ -8,8 +8,6 @@ AppVerName={#AppName}
 AppPublisher={#Publisher}
 DefaultDirName={pf}\{#AppName}
 DefaultGroupName={#AppName}
-ChangesEnvironment=yes
-PrivilegesRequired=admin
 LanguageDetectionMethod=locale
 
 OutputDir=output
@@ -75,9 +73,3 @@ Name: "{group}\Esolang Interpreters"; Filename: "{app}\pf.exe"; Components: pain
 Name: "{group}\Esolang Interpreters"; Filename: "{app}\sf.exe"; Components: smallfuck
 Name: "{group}\Esolang Interpreters"; Filename: "{app}\tick.exe"; Components: tick
 Name: "{group}\Esolang Interpreters"; Filename: "{app}\ticker.exe"; Components: ticker
-
-[Tasks]
-Name: "addtopath"; Description: "{cm:AddToPath}"; Flags: unchecked
-
-[Environment]
-Name: "PATH"; Value: "{app}"; Action: "prepend"; Flags: uninsdeletevalue; Tasks: addtopath
