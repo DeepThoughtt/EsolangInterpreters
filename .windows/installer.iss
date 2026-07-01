@@ -18,7 +18,6 @@ UninstallDisplayIcon={app}\esolangs.ico
 Compression=lzma
 SolidCompression=yes
 ArchitecturesInstallIn64BitMode=x64
-LanguageDetectionMethod=locale
 
 [Types]
 Name: "full"; Description: "Install everything"
