@@ -9,7 +9,7 @@ AppPublisher={#Publisher}
 DefaultDirName={pf}\{#AppName}
 DefaultGroupName={#AppName}
 ChangesEnvironment=yes
-SetupIconFile=assets\icons\esolangs.ico
+SetupIconFile=..\assets\icons\esolangs.ico
 
 [Types]
 Name: "full"; Description: "Install everything"
@@ -29,17 +29,17 @@ Name: "tick"; Description: "Tick Interpreter"; Types: full custom; Flags: checka
 Name: "ticker"; Description: "Ticker Interpreter"; Types: full custom; Flags: checkablealone
 
 [Files]
-Source: "dist\fr.exe"; DestDir: "{app}"; Components: forreal
-Source: "dist\abcd.exe"; DestDir: "{app}"; Components: abcd
-Source: "dist\boolfk.exe"; DestDir: "{app}"; Components: boolfuck
-Source: "dist\bf.exe"; DestDir: "{app}"; Components: brainfuck
-Source: "dist\itick.exe"; DestDir: "{app}"; Components: infinitick
-Source: "dist\mbm.exe"; DestDir: "{app}"; Components: minibitmove
-Source: "dist\msf.exe"; DestDir: "{app}"; Components: ministringfuck
-Source: "dist\pf.exe"; DestDir: "{app}"; Components: paintfuck
-Source: "dist\sf.exe"; DestDir: "{app}"; Components: smallfuck
-Source: "dist\tick.exe"; DestDir: "{app}"; Components: tick
-Source: "dist\ticker.exe"; DestDir: "{app}"; Components: ticker
+Source: "..\dist\fr.exe"; DestDir: "{app}"; Components: forreal
+Source: "..\dist\abcd.exe"; DestDir: "{app}"; Components: abcd
+Source: "..\dist\boolfk.exe"; DestDir: "{app}"; Components: boolfuck
+Source: "..\dist\bf.exe"; DestDir: "{app}"; Components: brainfuck
+Source: "..\dist\itick.exe"; DestDir: "{app}"; Components: infinitick
+Source: "..\dist\mbm.exe"; DestDir: "{app}"; Components: minibitmove
+Source: "..\dist\msf.exe"; DestDir: "{app}"; Components: ministringfuck
+Source: "..\dist\pf.exe"; DestDir: "{app}"; Components: paintfuck
+Source: "..\dist\sf.exe"; DestDir: "{app}"; Components: smallfuck
+Source: "..\dist\tick.exe"; DestDir: "{app}"; Components: tick
+Source: "..\dist\ticker.exe"; DestDir: "{app}"; Components: ticker
 
 [Icons]
 Name: "{group}\Esolang Interpreters"; Filename: "{app}\fr.exe"; Components: forreal
