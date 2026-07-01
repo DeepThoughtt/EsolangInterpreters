@@ -62,5 +62,8 @@ Name: "{group}\Esolang Interpreters"; Filename: "{app}\sf.exe"; Components: smal
 Name: "{group}\Esolang Interpreters"; Filename: "{app}\tick.exe"; Components: tick
 Name: "{group}\Esolang Interpreters"; Filename: "{app}\ticker.exe"; Components: ticker
 
+[Tasks]
+Name: "addtopath"; Description: "Add Esolang Interpreters to PATH"; Flags: unchecked
+
 [Environment]
-Name: "PATH"; Value: "{app}"; Action: "prepend"; Flags: uninsdeletevalue
+Name: "PATH"; Value: "{app}"; Action: "prepend"; Flags: uninsdeletevalue; Tasks: addtopath
