@@ -27,8 +27,6 @@ english.InstallAllTheInterpreters=Install all the interpreters
 italian.InstallAllTheInterpreters=Installa tutti gli interpreti
 english.PickInterpreters=Pick the interpreters to install
 italian.PickInterpreters=Seleziona gli interpreti da installare
-english.AddToPath=Add Esolang Interpreters to PATH
-italian.AddToPath=Aggiungi la cartella Esolang Interpreters al PATH
 
 [Types]
 Name: "full"; Description: "{cm:InstallAllTheInterpreters}"
