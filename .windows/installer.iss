@@ -8,11 +8,6 @@ AppVerName={#AppName}
 AppPublisher={#Publisher}
 DefaultDirName={pf}\{#AppName}
 DefaultGroupName={#AppName}
-
-[Setup]
-AppName=Esolang Interpreters
-AppVersion=1.0
-DefaultDirName={autopf}\EsolangInterpreters
 ChangesEnvironment=yes
 SetupIconFile=assets\icons\esolangs.ico
 
