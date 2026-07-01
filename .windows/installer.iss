@@ -9,6 +9,8 @@ AppPublisher={#Publisher}
 DefaultDirName={pf}\{#AppName}
 DefaultGroupName={#AppName}
 ChangesEnvironment=yes
+PrivilegesRequired=admin
+LanguageDetectionMethod=locale
 
 OutputDir=output
 OutputBaseFilename=EsolangInterpreters-Windows-Installer
@@ -18,22 +20,34 @@ Compression=lzma
 SolidCompression=yes
 ArchitecturesInstallIn64BitMode=x64
 
+[Languages]
+Name: "english"; MessagesFile: "compiler:Default.isl"
+Name: "italian"; MessagesFile: "compiler:Languages\Italian.isl"
+
+[CustomMessages]
+english.InstallAllTheInterpreters=Install all the interpreters
+italian.InstallAllTheInterpreters=Installa tutti gli interpreti
+english.PickInterpreters=Pick the interpreters to install
+italian.PickInterpreters=Seleziona gli interpreti da installare
+english.AddToPath=Add Esolang Interpreters to PATH
+italian.AddToPath=Aggiungi la cartella Esolang Interpreters al PATH
+
 [Types]
-Name: "full"; Description: "Install everything"
-Name: "custom"; Description: "Choose which interpreters to install"; Flags: iscustom
+Name: "full"; Description: "{cm:InstallAllTheInterpreters}"
+Name: "custom"; Description: "{cm:PickInterpreters}"; Flags: iscustom
 
 [Components]
-Name: "forreal"; Description: "4RL Interpreter"; Types: full custom; Flags: checkablealone
-Name: "abcd"; Description: "ABCD Interpreter"; Types: full custom; Flags: checkablealone
-Name: "boolfuck"; Description: "Boolfuck Interpreter"; Types: full custom; Flags: checkablealone
-Name: "brainfuck"; Description: "Brainfuck Interpreter"; Types: full custom; Flags: checkablealone
-Name: "infinitick"; Description: "Infinitick Interpreter"; Types: full custom; Flags: checkablealone
-Name: "minibitmove"; Description: "MiniBitMove Interpreter"; Types: full custom; Flags: checkablealone
-Name: "ministringfuck"; Description: "MiniStringFuck Interpreter"; Types: full custom; Flags: checkablealone
-Name: "paintfuck"; Description: "Paintfuck Interpreter"; Types: full custom; Flags: checkablealone
-Name: "smallfuck"; Description: "Smallfuck Interpreter"; Types: full custom; Flags: checkablealone
-Name: "tick"; Description: "Tick Interpreter"; Types: full custom; Flags: checkablealone
-Name: "ticker"; Description: "Ticker Interpreter"; Types: full custom; Flags: checkablealone
+Name: "forreal"; Description: "4RL"; Types: full custom; Flags: checkablealone
+Name: "abcd"; Description: "ABCD"; Types: full custom; Flags: checkablealone
+Name: "boolfuck"; Description: "Boolfuck"; Types: full custom; Flags: checkablealone
+Name: "brainfuck"; Description: "Brainfuck"; Types: full custom; Flags: checkablealone
+Name: "infinitick"; Description: "Infinitick"; Types: full custom; Flags: checkablealone
+Name: "minibitmove"; Description: "MiniBitMove"; Types: full custom; Flags: checkablealone
+Name: "ministringfuck"; Description: "MiniStringFuck"; Types: full custom; Flags: checkablealone
+Name: "paintfuck"; Description: "Paintfuck"; Types: full custom; Flags: checkablealone
+Name: "smallfuck"; Description: "Smallfuck"; Types: full custom; Flags: checkablealone
+Name: "tick"; Description: "Tick"; Types: full custom; Flags: checkablealone
+Name: "ticker"; Description: "Ticker"; Types: full custom; Flags: checkablealone
 
 [Files]
 Source: "..\dist\fr.exe"; DestDir: "{app}"; Components: forreal
@@ -63,7 +77,7 @@ Name: "{group}\Esolang Interpreters"; Filename: "{app}\tick.exe"; Components: ti
 Name: "{group}\Esolang Interpreters"; Filename: "{app}\ticker.exe"; Components: ticker
 
 [Tasks]
-Name: "addtopath"; Description: "Add Esolang Interpreters to PATH"; Flags: unchecked
+Name: "addtopath"; Description: "{cm:AddToPath}"; Flags: unchecked
 
 [Environment]
 Name: "PATH"; Value: "{app}"; Action: "prepend"; Flags: uninsdeletevalue; Tasks: addtopath
