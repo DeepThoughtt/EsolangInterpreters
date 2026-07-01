@@ -9,14 +9,14 @@ import sys
 sys.path.insert(0, project_root)
 
 datas = []
-datas += collect_data_files("assets")
+datas += collect_data_files(os.path.join(project_root, "assets"))
 
 a = Analysis(
     [os.path.join(project_root, 'src/infinitick.py')],
     pathex=[project_root],
     binaries=[],
     datas=datas,
-    hiddenimports=collect_submodules('src'),
+    hiddenimports=collect_submodules(os.path.join(project_root, 'src')),
     hookspath=[],
     hooksconfig={},
     runtime_hooks=[],
@@ -41,5 +41,5 @@ exe = EXE(
     upx_exclude=[],
     runtime_tmpdir=None,
     console=False,
-    icon='assets/icons/esolangs.ico',
+    icon=os.path.join(project_root, 'assets', 'icons', 'esolangs.ico'),
 )
