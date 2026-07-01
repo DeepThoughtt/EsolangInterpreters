@@ -11,6 +11,15 @@ DefaultGroupName={#AppName}
 ChangesEnvironment=yes
 SetupIconFile=..\assets\icons\esolangs.ico
 
+OutputDir=output
+OutputBaseFilename=EsolangInterpreters-Windows-Installer
+SetupIconFile=..\assets\icons\esolangs.ico
+UninstallDisplayIcon={app}\esolangs.ico
+Compression=lzma
+SolidCompression=yes
+ArchitecturesInstallIn64BitMode=x64
+LanguageDetectionMethod=locale
+
 [Types]
 Name: "full"; Description: "Install everything"
 Name: "custom"; Description: "Choose which interpreters to install"; Flags: iscustom
@@ -40,6 +49,7 @@ Source: "..\dist\pf.exe"; DestDir: "{app}"; Components: paintfuck
 Source: "..\dist\sf.exe"; DestDir: "{app}"; Components: smallfuck
 Source: "..\dist\tick.exe"; DestDir: "{app}"; Components: tick
 Source: "..\dist\ticker.exe"; DestDir: "{app}"; Components: ticker
+Source: "..\assets\icons\esolangs.ico"; DestDir: "{app}"
 
 [Icons]
 Name: "{group}\Esolang Interpreters"; Filename: "{app}\fr.exe"; Components: forreal
