@@ -10,7 +10,7 @@ def main():
     parser.add_argument("-h", "--height", type = int)
     args = parser.parse_args()
     result_grid = PaintfuckInterpreter(args.source_code_file, args.iterations, args.width, args.height).run()
-    print(result_grid)
+    print(result_grid, end = "")
 
 if __name__ == "__main__":
     try:

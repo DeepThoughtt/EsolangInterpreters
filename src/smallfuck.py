@@ -8,7 +8,7 @@ def main():
     parser.add_argument("data_file", type = str)
     args = parser.parse_args()
     result_tape = SmallfuckInterpreter(args.source_code_file, args.data_file).run()
-    print(result_tape)
+    print(result_tape, end = "")
 
 if __name__ == "__main__":
     try:
