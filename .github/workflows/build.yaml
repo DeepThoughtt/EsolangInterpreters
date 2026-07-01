@@ -29,17 +29,17 @@ jobs:
 
       - name: Build Windows executables
         run: |
-          pyinstaller esolang-abcd-windows.spec --noconfirm
-          pyinstaller esolang-boolfuck-windows.spec --noconfirm
-          pyinstaller esolang-brainfuck-windows.spec --noconfirm
-          pyinstaller esolang-forreal-windows.spec --noconfirm
-          pyinstaller esolang-infinitick-windows.spec --noconfirm
-          pyinstaller esolang-minibitmove-windows.spec --noconfirm
-          pyinstaller esolang-ministringfuck-windows.spec --noconfirm
-          pyinstaller esolang-paintfuck-windows.spec --noconfirm
-          pyinstaller esolang-smallfuck-windows.spec --noconfirm
-          pyinstaller esolang-tick-windows.spec --noconfirm
-          pyinstaller esolang-ticker-windows.spec --noconfirm
+          pyinstaller .windows\esolang-abcd-windows.spec --noconfirm
+          pyinstaller .windows\esolang-boolfuck-windows.spec --noconfirm
+          pyinstaller .windows\esolang-brainfuck-windows.spec --noconfirm
+          pyinstaller .windows\esolang-forreal-windows.spec --noconfirm
+          pyinstaller .windows\esolang-infinitick-windows.spec --noconfirm
+          pyinstaller .windows\esolang-minibitmove-windows.spec --noconfirm
+          pyinstaller .windows\esolang-ministringfuck-windows.spec --noconfirm
+          pyinstaller .windows\esolang-paintfuck-windows.spec --noconfirm
+          pyinstaller .windows\esolang-smallfuck-windows.spec --noconfirm
+          pyinstaller .windows\esolang-tick-windows.spec --noconfirm
+          pyinstaller .windows\esolang-ticker-windows.spec --noconfirm
 
       - name: Install Inno Setup
         run: |
