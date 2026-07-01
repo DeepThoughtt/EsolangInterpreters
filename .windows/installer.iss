@@ -9,7 +9,6 @@ AppPublisher={#Publisher}
 DefaultDirName={pf}\{#AppName}
 DefaultGroupName={#AppName}
 ChangesEnvironment=yes
-SetupIconFile=..\assets\icons\esolangs.ico
 
 OutputDir=output
 OutputBaseFilename=EsolangInterpreters-Windows-Installer
