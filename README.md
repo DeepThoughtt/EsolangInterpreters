@@ -22,3 +22,7 @@ as a proof of concept, as software art, as a hacking interface to another langua
 The legacy folder contains the original implementations of the esolang interpreters who were made years ago. 
 Since then I learned more and decided to rewrite the interpreters in a better way. If you want to keep using
 the interpreters as usual you can still import them from the legacy folder.
+
+## Icon
+You can find the icon that was used for this project here:
+<a href="https://www.flaticon.com/free-icons/programming-language" title="programming language icons">Programming language icons created by Freepik - Flaticon</a>
