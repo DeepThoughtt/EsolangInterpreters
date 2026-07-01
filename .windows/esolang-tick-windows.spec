@@ -12,7 +12,7 @@ datas = []
 datas += collect_data_files("assets")
 
 a = Analysis(
-    ['src/tick.py'],
+    [os.path.join(project_root, 'src/tick.py')],
     pathex=[project_root],
     binaries=[],
     datas=datas,

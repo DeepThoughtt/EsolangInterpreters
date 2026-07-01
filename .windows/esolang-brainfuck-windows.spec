@@ -12,7 +12,7 @@ datas = []
 datas += collect_data_files("assets")
 
 a = Analysis(
-    ['src/brainfuck.py'],
+    [os.path.join(project_root, 'src/brainfuck.py')],
     pathex=[project_root],
     binaries=[],
     datas=datas,

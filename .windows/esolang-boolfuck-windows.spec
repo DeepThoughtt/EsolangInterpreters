@@ -12,7 +12,7 @@ datas = []
 datas += collect_data_files("assets")
 
 a = Analysis(
-    ['src/boolfuck.py'],
+    [os.path.join(project_root, 'src/boolfuck.py')],
     pathex=[project_root],
     binaries=[],
     datas=datas,

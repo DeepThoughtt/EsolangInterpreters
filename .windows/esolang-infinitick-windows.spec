@@ -12,7 +12,7 @@ datas = []
 datas += collect_data_files("assets")
 
 a = Analysis(
-    ['src/infinitick.py'],
+    [os.path.join(project_root, 'src/infinitick.py')],
     pathex=[project_root],
     binaries=[],
     datas=datas,
