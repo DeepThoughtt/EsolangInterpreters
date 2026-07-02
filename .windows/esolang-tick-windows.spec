@@ -9,14 +9,12 @@ import sys
 sys.path.insert(0, project_root)
 
 datas = []
-datas += collect_data_files(os.path.join(project_root, "assets"))
+datas += collect_data_files("assets")
 
 a = Analysis(
-    [os.path.join(project_root, 'src/tick.py')],
-    pathex=[project_root],
+    ['../src/tick.py'],
     binaries=[],
     datas=datas,
-    hiddenimports=collect_submodules(os.path.join(project_root, 'src')),
     hookspath=[],
     hooksconfig={},
     runtime_hooks=[],
@@ -41,5 +39,5 @@ exe = EXE(
     upx_exclude=[],
     runtime_tmpdir=None,
     console=True,
-    icon=os.path.join(project_root, 'assets', 'icons', 'esolangs.ico'),
+    icon="../assets/icons/esolangs.ico",
 )
