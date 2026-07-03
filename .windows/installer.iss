@@ -13,6 +13,7 @@ LanguageDetectionMethod=locale
 OutputDir=output
 OutputBaseFilename=EsolangInterpreters-Windows-Installer
 SetupIconFile=..\assets\icons\esolangs.ico
+LicenseFile=..\LICENSE
 UninstallDisplayIcon={app}\esolangs.ico
 Compression=lzma
 SolidCompression=yes
