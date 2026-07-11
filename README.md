@@ -19,7 +19,7 @@ as a proof of concept, as software art, as a hacking interface to another langua
 - Ticker
 
 ## Legacy folder
-The legacy folder contains the original implementations of the esolang interpreters who were made years ago. 
+The `legacy` folder contains the original implementations of the esolang interpreters who were made years ago. 
 Since then I learned more and decided to rewrite the interpreters in a better way. If you want to keep using
 the interpreters as usual you can still import them from the legacy folder.
 
