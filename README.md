@@ -20,7 +20,7 @@ as a proof of concept, as software art, as a hacking interface to another langua
 
 ## Legacy folder
 The `legacy` folder contains the older versions of the esolang interpreters.
-I’ve since rewritten them with a better design, but you can still use the original modules if you want.
+I’ve rewritten them with a better design but you can still use the original modules if you want.
 
 ## Icon
 You can find the icon that was used for this project here:
